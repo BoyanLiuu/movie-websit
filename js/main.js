@@ -124,7 +124,7 @@ $(function() {
     $.ajax(settings).done(function(response) {
       if(response.results.length > 1) {
         $.each(response.results, function(key, value) {
-          $(sliderID).slick('slickAdd', '<div class="title mb-4"><a id="'+ value.id +'" href="javascript:void(0)"><div class="title-img-container"><div class="title-rating"><i class="fas fa-star"></i> <span>'+ value.vote_average +'</span></div><img src="'+ BASE_IMG_URL +'w342/'+ value.poster_path +'" alt=""></div><p class="title-name text-truncate">'+ value.original_title +'</p></a></div>');
+          $(sliderID).slick('slickAdd', '<div class="title mb-4"><a id="'+ value.id +'" href="javascript:void(0)"><div class="moviecover title-img-container "><div class="title-rating"><i class="fas fa-star"></i> <span>'+ value.vote_average +'</span></div><img src="'+ BASE_IMG_URL +'w342/'+ value.poster_path +'" alt=""></div><p class="title-name text-truncate">'+ value.original_title +'</p></a></div>');
         });
       } else {
         $(sliderID).append('<p class="lead">No movies found, we\'re sorry :/</p>');
@@ -151,7 +151,7 @@ $(function() {
       if(response.results.length > 0) {
         $.each(response.results, function(key, value) {
           if(key < 5) {
-            $('#review-container').append('<blockquote class="blockquote review mt-4"><p class="mb-0">'+ value.content +'</p><footer class="blockquote-footer">'+ value.author +'</footer</blockquote>');
+            $('#review-container').append('<blockquote class="blockquote review mt-4"><p class=" reviews mb-0">'+ value.content +'</p><footer class="blockquote-footer">'+ value.author +'</footer</blockquote>');
           }
         });
       } else {
